@@ -27,7 +27,7 @@
         </div>
       </a>
       @endforeach
-      <a href="" class="block text-gray-600 font-bold text-right">すべてのレシピへ ></a>
+      <a href="{{ route('recipe.index') }}" class="block text-gray-600 font-bold text-right">すべてのレシピへ ></a>
     </div>
     <div class="col-span-1 bg-gray ml-4">
       <img src="/images/ad.png" alt="広告">
@@ -49,5 +49,6 @@
       </div>
       <a href="" class="block text-gray-600 font-bold text-right">すべての人気レシピへ ></a>
     </div>
+    <div class="col-span-1"></div>
   </div>
 </x-app-layout>
