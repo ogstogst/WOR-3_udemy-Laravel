@@ -48,10 +48,10 @@ services:
             retries: 3
             timeout: 5s
     mailpit:
-        image: axllent/mailpit:v1.8
+        image: 'axllent/mailpit:v1.8'
         ports:
-            - 1025:1025
-            - 8025:8025
+            - '1025:1025'
+            - '8025:8025'
         networks:
             - sail
         depends_on:

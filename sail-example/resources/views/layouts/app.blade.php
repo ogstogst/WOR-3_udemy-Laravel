@@ -13,18 +13,20 @@
   <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-
   <!-- Scripts -->
   @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-  {{-- Style --}}
-  <link rel="stylesheet" href="css/color.css">
+  <link rel="stylesheet" href="/css/color.css">
+  @if( isset($script) )
+  {{ $script }}
+  @endif
 </head>
 
 <body class="font-sans antialiased background-color">
   <div class="min-h-screen">
+    <!-- ここに共通ヘッダーのコンポーネントを読み込む -->
     @include('layouts.announce-header')
     @include('layouts.global-header')
+    {{-- @include('flash::message') --}}
 
     <!-- Page Heading -->
     @if (isset($header))
